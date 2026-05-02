@@ -1,0 +1,60 @@
+{
+  "shaanxi": {
+    "name": "陕西",
+    "poemIds": ["spring-gazing","tong-pass-nostalgia","jianjia","farewell-du-shaofu","hard-is-the-way","charcoal-seller","untitled"],
+    "extent": {
+      "minX": 11743483,
+      "minY": 3724679,
+      "maxX": 12384013,
+      "maxY": 4806108
+    }
+  },
+  "sichuan": {
+    "name": "四川",
+    "poemIds": [
+      "two-orioles",
+      "chu-shi-biao",
+      "road-to-shu",
+      "emei-moon",
+      "thatched-hut-song",
+      "spring-rain-chengdu",
+      "shu-xiang",
+      "long-march",
+      "gift-to-huaqing",
+      "climbing-tower",
+      "chengdu-song",
+      "leaving-white-emperor-town",
+      "farewell-du-shaofu",
+      "hard-is-the-way",
+      "dengao",
+      "walk-by-river-flowers",
+      "hearing-army-recover",
+      "friend-to-shu",
+      "west-sichuan-yading-crane",
+      "west-sichuan-kangding-shudao",
+      "west-sichuan-xinduqiao-frontier",
+      "west-sichuan-litang-crane",
+      "west-sichuan-seda-temple",
+      "west-sichuan-ganzi-qizhong",
+      "west-sichuan-tagong-liangzhou",
+      "west-sichuan-gongga-wangyue",
+      "west-sichuan-moshi-zoumachuan",
+      "west-sichuan-dege-reading",
+      "west-sichuan-huanglong-snow",
+      "west-sichuan-siguniang-jingting",
+      "west-sichuan-ruoergai-night",
+      "west-sichuan-hongyuan-congjun",
+      "west-sichuan-dagu-river-snow",
+      "west-sichuan-bipenggou-dongda",
+      "west-sichuan-danba-qiangcun",
+      "west-sichuan-zheduo-pass",
+      "west-sichuan-luding-longmarch"
+    ],
+    "extent": {
+      "minX": 10836963,
+      "minY": 3004763,
+      "maxX": 12083340,
+      "maxY": 4070833
+    }
+  }
+}
