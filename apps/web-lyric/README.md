@@ -1,8 +1,16 @@
 # Web Lyric
 
-React 19、Vite、Three.js 实现的诗词地形演示应用。应用运行在 Turborepo 的 `apps/web-lyric` 下，地图、高程、河流遮罩、字体、音频等前端运行资源均放在本应用的 `public/` 目录。
+`web-lyric` 是 `fe-lyric` Turborepo 中的主前端应用，基于 React 19、Vite 和 Three.js 实现诗词地形地图。
+
+## 截图
+
+![桌面视图](../../docs/images/overview.png)
+
+![H5 视图](../../docs/images/mobile-h5.png)
 
 ## 本地开发
+
+在仓库根目录执行：
 
 ```bash
 pnpm install
@@ -16,13 +24,17 @@ cd apps/web-lyric
 pnpm dev
 pnpm build
 pnpm preview
-```
-
-类型检查：
-
-```bash
 pnpm typecheck
 ```
+
+## 已实现能力
+
+- Three.js 地形渲染：位移、河流、法线光照、边缘线与色阶控制。
+- 3857 投影：经纬度到地图世界坐标映射。
+- 古诗点位飞行：点击后镜头聚焦并展示诗文卡片。
+- 古地名层：独立于交互锚点显示。
+- 局部特效：`drizzle / snowfall / windgust / sandstorm / smoke / waterfall`。
+- 音频 cue：鸟鸣、风、烟、瀑布、沙声等本地音频资源。
 
 ## 目录结构
 
@@ -43,15 +55,6 @@ apps/web-lyric/
     ├── lib/
     └── map/
 ```
-
-## 已实现能力
-
-- Three.js 地形渲染：位移、河流、法线光照、边缘线与色阶控制
-- 3857 投影：经纬度到地图世界坐标映射
-- 古诗点位飞行：点击后镜头聚焦并展示诗文卡片
-- 古地名层：独立于交互锚点显示
-- 局部特效：`drizzle / snowfall / windgust / sandstorm / smoke / waterfall`
-- 音频 cue：鸟鸣、风、烟、瀑布、沙声等本地音频资源
 
 ## 运行资源
 
@@ -76,10 +79,6 @@ node --max-old-space-size=4096 scripts/encode-heightmap-rg.mjs
 DILATE_ROUNDS=260 node --max-old-space-size=4096 scripts/encode-heightmap-rg.mjs
 ```
 
-## 可选统计
+## 协议
 
-默认不会注入固定第三方统计脚本。若需要百度统计，可在构建时设置：
-
-```bash
-VITE_BAIDU_TONGJI_ID=your_id pnpm build
-```
+项目代码遵循仓库根目录的 [MIT License](../../LICENSE)。字体、地图、高程、音频和图片等资源可能有独立授权要求。
