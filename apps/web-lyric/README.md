@@ -6,9 +6,18 @@
 
 ## Showcase
 
-![Sichuan poetry terrain view](../../docs/images/showcase-sichuan.jpg)
-
-![Poem detail interaction](../../docs/images/showcase-poem.jpg)
+<table>
+  <tr>
+    <td width="33.33%"><img src="../../docs/images/showcase-sichuan.jpg" alt="Sichuan poetry terrain view" /></td>
+    <td width="33.33%"><img src="../../docs/images/showcase-china.jpg" alt="China terrain overview" /></td>
+    <td width="33.33%"><img src="../../docs/images/showcase-poem.jpg" alt="Poem detail interaction" /></td>
+  </tr>
+  <tr>
+    <td align="center">Sichuan terrain</td>
+    <td align="center">China overview</td>
+    <td align="center">Poem detail</td>
+  </tr>
+</table>
 
 ## Development
 

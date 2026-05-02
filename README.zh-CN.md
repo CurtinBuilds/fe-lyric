@@ -13,11 +13,18 @@
 
 ## 预览
 
-![四川诗词地形视图](./docs/images/showcase-sichuan.jpg)
-
-![中国地形总览](./docs/images/showcase-china.jpg)
-
-![诗词详情交互](./docs/images/showcase-poem.jpg)
+<table>
+  <tr>
+    <td width="33.33%"><img src="./docs/images/showcase-sichuan.jpg" alt="四川诗词地形视图" /></td>
+    <td width="33.33%"><img src="./docs/images/showcase-china.jpg" alt="中国地形总览" /></td>
+    <td width="33.33%"><img src="./docs/images/showcase-poem.jpg" alt="诗词详情交互" /></td>
+  </tr>
+  <tr>
+    <td align="center">四川地形</td>
+    <td align="center">中国总览</td>
+    <td align="center">诗词详情</td>
+  </tr>
+</table>
 
 ## 特性
 
