@@ -1,30 +1,34 @@
 # fe-lyric
 
+[简体中文](./README.zh-CN.md)
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Turborepo](https://img.shields.io/badge/Turborepo-2.x-ef4444.svg)
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-5-646cff.svg)
 
-`fe-lyric` 是一个诗词地形可视化项目：以 3857 地形底图为舞台，将古诗点位、古地名、天气效果、音频 cue 和 Three.js 地形渲染组合成可交互的诗词地图。
+`fe-lyric` is an interactive poetry-and-terrain visualization project. It uses a 3857 projected terrain map as the stage, then layers classical Chinese poem locations, historical place names, weather effects, audio cues, and Three.js terrain rendering into a lyric map experience.
 
-项目使用 Turborepo 管理，当前主应用位于 `apps/web-lyric`。前端运行需要的地图、高程、河流遮罩、音频、字体等资源都放在本仓库本地 `public/` 目录中，不依赖线上 CDN 才能启动。
+The repository is organized as a Turborepo workspace. The main app lives in `apps/web-lyric`. Runtime frontend assets, including terrain textures, map masks, audio, and font shards, are kept locally under `public/` so the app can run without depending on a CDN.
 
-## 预览
+## Showcase
 
-![诗贯山河桌面视图](./docs/images/overview.png)
+![Sichuan poetry terrain view](./docs/images/showcase-sichuan.jpg)
 
-![诗贯山河 H5 视图](./docs/images/mobile-h5.png)
+![China terrain overview](./docs/images/showcase-china.jpg)
 
-## 特性
+![Poem detail interaction](./docs/images/showcase-poem.jpg)
 
-- Three.js 地形渲染：高程位移、河流遮罩、法线光照、边缘线和地貌色阶。
-- 古诗点位交互：选择诗词后镜头飞行到对应地理位置，并显示诗文内容。
-- 古地名层：以地名标签补充诗词点位之外的历史语境。
-- 天气与环境效果：雨、雪、风、沙、烟、瀑布等局部效果。
-- 本地资源优先：地图、贴图、字体、音频等前端资源均随仓库提供。
-- H5 路由：提供适合竖屏展示和录制的移动端视图。
+## Features
 
-## 技术栈
+- Three.js terrain rendering with displacement, river masks, normals, edge lines, and terrain color ramps.
+- Poem location interaction with camera focus and poem cards.
+- Historical place-name labels that add context beyond poem anchor points.
+- Weather and ambience effects including rain, snow, wind, sand, smoke, and waterfall states.
+- Local-first frontend assets: maps, textures, fonts, and audio are committed with the project.
+- H5-friendly routes for vertical presentation and screen recording.
+
+## Stack
 
 - React 19
 - Vite 5
@@ -34,28 +38,28 @@
 - Turborepo
 - pnpm
 
-## 快速开始
+## Quick Start
 
-建议使用 Node.js 20 和 pnpm 9。
+Node.js 20 and pnpm 9 are recommended.
 
 ```bash
 pnpm install
 pnpm dev:web-lyric
 ```
 
-默认开发地址：
+Default local URL:
 
 ```text
 http://localhost:5176/
 ```
 
-H5 页面：
+H5 route:
 
 ```text
 http://localhost:5176/h5
 ```
 
-## 常用命令
+## Commands
 
 ```bash
 pnpm dev:web-lyric
@@ -63,14 +67,14 @@ pnpm build:web-lyric
 pnpm typecheck
 ```
 
-预览构建产物：
+Preview a production build:
 
 ```bash
 cd apps/web-lyric
 pnpm preview
 ```
 
-## 项目结构
+## Project Layout
 
 ```text
 .
@@ -91,23 +95,23 @@ pnpm preview
 └── turbo.json
 ```
 
-## 本地资源
+## Local Assets
 
-运行时主要资源位于：
+Main runtime assets are stored in:
 
 - `apps/web-lyric/public/earth-map-3857/`
 - `apps/web-lyric/public/map-province-3857/`
 - `apps/web-lyric/public/audio/`
 - `apps/web-lyric/public/fonts/`
 
-资源入口集中在 `apps/web-lyric/src/assets.ts`，默认使用站内绝对路径，例如 `/earth-map-3857/...`、`/audio/...` 和 `/fonts/...`。
+Asset paths are centralized in `apps/web-lyric/src/assets.ts` and use site-root paths such as `/earth-map-3857/...`, `/audio/...`, and `/fonts/...`.
 
-## 开源协议
+## License
 
-本项目代码以 [MIT License](./LICENSE) 开源。
+The project code is released under the [MIT License](./LICENSE).
 
-仓库中包含的字体、地图、高程、音频和图片等资源可能有各自的来源和授权要求。二次分发或商用前，请自行确认相关资源的许可证兼容性。
+Fonts, map data, terrain textures, audio, and image assets included in this repository may have their own source and licensing requirements. Please verify asset licenses before redistribution or commercial use.
 
-## 说明
+## Large Assets
 
-GitHub 会对大于 50MB 的文件给出提示。本项目为了保证前端资源本地可用，暂时将高程贴图直接放在仓库中；如果后续资源继续增长，建议迁移到 Git LFS 或独立资源包。
+GitHub warns when files are larger than 50 MB. This project keeps terrain assets in the repository so the frontend remains fully local-first. If the asset set grows further, Git LFS or a separate asset package is recommended.
